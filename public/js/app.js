@@ -13,7 +13,7 @@ weatherForm.addEventListener('submit', e => {
   locationMessage.textContent = '';
   errorMessage.textContent = '';
   const address = search.value;
-  fetch(`https://weather-web-server-9lwg.onrender.com:3000/weather?address=${address}`).then(response => {
+  fetch(`https://weather-web-server-9lwg.onrender.com/weather?address=${address}`).then(response => {
     response.json().then(data => {
       if (data.error) {
         forecastMessage.textContent = '';
